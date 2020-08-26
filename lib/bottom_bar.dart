@@ -4,8 +4,9 @@ class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      shape: CircularNotchedRectangle(),
-      notchMargin: 6.0,
+      shape: CircularNotchedRectangle(
+
+      ),
       color: Colors.transparent,
       elevation: 9.0,
       clipBehavior: Clip.antiAlias,
@@ -19,20 +20,21 @@ class BottomBar extends StatelessWidget {
           color: Colors.white,
         ),
         child: Row(
+
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
               height: 50.0,
               width: MediaQuery.of(context).size.width / 2 - 40.0,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Icon(
                     Icons.home,
                     color: Colors.green,
                   ),
                   Icon(
-                    Icons.person,
+                    Icons.history,
                     color: Color(0xff676e79),
                   ),
                 ],
@@ -42,14 +44,14 @@ class BottomBar extends StatelessWidget {
               height: 50.0,
               width: MediaQuery.of(context).size.width / 2 - 40.0,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Icon(
-                    Icons.search,
+                    Icons.settings,
                     color: Colors.green,
                   ),
                   Icon(
-                    Icons.shopping_basket,
+                    Icons.person,
                     color: Color(0xff676e79),
                   ),
                 ],
