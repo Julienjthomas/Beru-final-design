@@ -1,23 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:beru_final/home_page.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:styled_text/styled_text.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        body: StartPage(),
-      ),
-    );
-  }
-}
 
 class StartPage extends StatelessWidget {
   const StartPage({
@@ -38,11 +23,11 @@ class StartPage extends StatelessWidget {
         Text(
           "Welcome to Beru",
           style:
-              GoogleFonts.lato(fontSize: 30.0, fontWeight: FontWeight.bold),
+          GoogleFonts.lato(fontSize: 30.0, fontWeight: FontWeight.bold),
         ),
         Padding(
           padding:
-              const EdgeInsets.only(top: 80.0, right: 30.0, left: 30.0),
+          const EdgeInsets.only(top: 80.0, right: 30.0, left: 30.0),
           child: AspectRatio(
             aspectRatio: 6.0,
             child: Container(
@@ -80,7 +65,7 @@ class StartPage extends StatelessWidget {
         ),
         Padding(
           padding:
-              const EdgeInsets.only(top: 25.0, right: 30.0, left: 30.0),
+          const EdgeInsets.only(top: 25.0, right: 30.0, left: 30.0),
           child: AspectRatio(
             aspectRatio: 6,
             child: Container(
@@ -158,17 +143,17 @@ class StartPage extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(top: 12.0,right: 50.0,left: 60.0),
           child: Center(
-            child:StyledText(
-              text: '<lato>By continuing, you agree to Beru\'s <bold> Terms of Service </bold>  and <bold> privacy policy </bold> </lato>',
-              styles: {
-                'lato':GoogleFonts.lato(
-                fontSize: 12.0,
-            ),
-                'bold': GoogleFonts.lato(
-                  fontSize: 12.0, fontWeight: FontWeight.bold
-                ),
-              },
-            )
+              child:StyledText(
+                text: '<lato>By continuing, you agree to Beru\'s <bold> Terms of Service </bold>  and <bold> privacy policy </bold> </lato>',
+                styles: {
+                  'lato':GoogleFonts.lato(
+                    fontSize: 12.0,
+                  ),
+                  'bold': GoogleFonts.lato(
+                      fontSize: 12.0, fontWeight: FontWeight.bold
+                  ),
+                },
+              )
 //                Text(
 //                  'By Continuing,you agree to Beru\'s Terms of Service \n and privacy policy',
 //                  style: GoogleFonts.lato(fontSize: 12.0),
