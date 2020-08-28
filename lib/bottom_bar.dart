@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      shape: CircularNotchedRectangle(
-
-      ),
+      shape: CircularNotchedRectangle(),
       color: Colors.transparent,
       elevation: 9.0,
       clipBehavior: Clip.antiAlias,
@@ -20,7 +19,6 @@ class BottomBar extends StatelessWidget {
           color: Colors.white,
         ),
         child: Row(
-
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
@@ -58,6 +56,83 @@ class BottomBar extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class BottomBarCart extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return BottomAppBar(
+
+      child: Container(
+        height: 80.0,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(25.0),
+            topRight: Radius.circular(25.0),
+          ),
+          color: Colors.white,
+        ),
+        child: Center(
+          child: Row(
+            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              SizedBox(
+                width: 10.0,
+              ),
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Center(
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Center(
+                              child: Center(
+                                  child: Text(
+                            '4 ITEMS',
+                            style: GoogleFonts.openSans(
+                                fontSize: 15.0, color: Colors.grey),
+                          ))),
+                        ),
+                      ),
+                      Text(
+                        '4 KG',
+                        style: GoogleFonts.openSans(
+                            fontSize: 15.0, color: Colors.grey),
+                      ),
+                    ],
+                  ),
+                  Text(
+                    '₹200',
+                    style: GoogleFonts.openSans(
+                        fontSize: 20.0, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.start,
+                  ),
+                ],
+              ),
+              AspectRatio(aspectRatio: 1.0),
+              Container(
+                height: 50,
+                width: 180.0,
+                child: RaisedButton(
+                  child: Text(
+                    "View Cart",
+                    style: GoogleFonts.openSans(fontSize: 18.0,color: Colors.white,fontWeight: FontWeight.w400),
+                  ),
+                  onPressed: () {},
+                  color: Color(0xff2BC48B),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(08.0),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
