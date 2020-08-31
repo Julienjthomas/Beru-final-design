@@ -93,7 +93,6 @@ class VegetablePage extends StatelessWidget {
                           fit: BoxFit.fitHeight),
                     ),
                   )),
-
               Text(
                 name,
                 style: GoogleFonts.openSans(
@@ -111,7 +110,6 @@ class VegetablePage extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-
                 children: <Widget>[
                   buildOutlineButton(icon: Icons.remove, press: () {}),
                   Padding(
@@ -122,9 +120,10 @@ class VegetablePage extends StatelessWidget {
                       width: 26.0,
                       height: 18.0,
                       child: Padding(
-                        padding: const EdgeInsets.only(top:3),
+                        padding: const EdgeInsets.only(top: 3),
                         child: Text(
-                          '1',textAlign: TextAlign.center,
+                          '1',
+                          textAlign: TextAlign.center,
                           style: GoogleFonts.openSans(fontSize: 10.0),
                         ),
                       ),
@@ -141,7 +140,11 @@ class VegetablePage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 5.0, right: 5.0,bottom: 5.0,),
+                padding: EdgeInsets.only(
+                  left: 5.0,
+                  right: 5.0,
+                  bottom: 5.0,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
@@ -166,7 +169,8 @@ class VegetablePage extends StatelessWidget {
                     ),
                     Text(
                       'Buy Now',
-                      style: GoogleFonts.openSans(fontSize: 10.0,color: Color(0xff2BC48B)),
+                      style: GoogleFonts.openSans(
+                          fontSize: 10.0, color: Color(0xff2BC48B)),
                     ),
 
 //                    ,

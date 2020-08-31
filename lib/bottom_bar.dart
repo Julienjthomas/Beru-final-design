@@ -1,3 +1,5 @@
+import 'package:beru_final/cart.dart';
+import 'package:beru_final/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -48,9 +50,15 @@ class BottomBar extends StatelessWidget {
                     Icons.settings,
                     color: Colors.green,
                   ),
-                  Icon(
-                    Icons.person,
-                    color: Color(0xff676e79),
+                  FlatButton(
+                    onPressed: (){
+
+                    },
+                    child: Icon(
+                      Icons.person,
+                      color: Color(0xff676e79),
+
+                    ),
                   ),
                 ],
               ),
@@ -124,7 +132,11 @@ class BottomBarCart extends StatelessWidget {
                     "View Cart",
                     style: GoogleFonts.openSans(fontSize: 18.0,color: Colors.white,fontWeight: FontWeight.w400),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return Cart();
+                    }),);
+                  },
                   color: Color(0xff2BC48B),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(08.0),

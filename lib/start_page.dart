@@ -1,3 +1,4 @@
+import 'package:beru_final/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:beru_final/home_page.dart';
 import 'package:flutter/cupertino.dart';
@@ -42,7 +43,7 @@ class StartPage extends StatelessWidget {
                   children: [
                     Container(
                       child: Image.asset(
-                        'images/facebook(1).png',
+                        'images/fb.png',
                         scale: 22.0,
                       ),
                       decoration: BoxDecoration(
@@ -126,7 +127,7 @@ class StartPage extends StatelessWidget {
                 ),
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context){
-                    return HomePage();
+                    return SignUp();
                   }));
                 },
               ),
