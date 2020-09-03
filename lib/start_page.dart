@@ -1,3 +1,5 @@
+import 'package:beru_final/data_error.dart';
+import 'package:beru_final/product_display.dart';
 import 'package:beru_final/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:beru_final/home_page.dart';
@@ -26,72 +28,86 @@ class StartPage extends StatelessWidget {
           style:
           GoogleFonts.lato(fontSize: 30.0, fontWeight: FontWeight.bold),
         ),
-        Padding(
-          padding:
-          const EdgeInsets.only(top: 80.0, right: 30.0, left: 30.0),
-          child: AspectRatio(
-            aspectRatio: 6.0,
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Color(0xff635FFC),
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.all(Radius.circular(10.0))),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      child: Image.asset(
-                        'images/fb.png',
-                        scale: 22.0,
+        FlatButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context){
+              return ErrorPage();
+            }));
+          },
+          child: Padding(
+            padding:
+            const EdgeInsets.only(top: 70.0, right: 15.0, left: 15.0),
+            child: AspectRatio(
+              aspectRatio: 6.0,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Color(0xff635FFC),
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        child: Image.asset(
+                          'images/fb.png',
+                          scale: 22.0,
+                        ),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(50.0)),
                       ),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50.0)),
-                    ),
-                    AspectRatio(aspectRatio: 0.8),
-                    Text(
-                      'Continue with facebook',
-                      style: GoogleFonts.lato(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
-                  ],
+                      AspectRatio(aspectRatio: 0.8),
+                      Text(
+                        'Continue with facebook',
+                        style: GoogleFonts.lato(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
           ),
         ),
-        Padding(
-          padding:
-          const EdgeInsets.only(top: 25.0, right: 30.0, left: 30.0),
-          child: AspectRatio(
-            aspectRatio: 6,
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.rectangle,
-                  border: Border.all(color: Colors.black),
-                  borderRadius: BorderRadius.all(Radius.circular(10.0))),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                    child: Image.asset(
-                      'images/google.png',
-                      scale: 12.0,
+        FlatButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context){
+              return ProductDisplay();
+            }));
+          },
+          child: Padding(
+            padding:
+            const EdgeInsets.only(top: 25.0, right: 30.0, left: 30.0),
+            child: AspectRatio(
+              aspectRatio: 6,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.rectangle,
+                    border: Border.all(color: Colors.black),
+                    borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                      child: Image.asset(
+                        'images/google.png',
+                        scale: 12.0,
+                      ),
                     ),
-                  ),
-                  AspectRatio(aspectRatio: 0.5),
-                  Text(
-                    'Continue with google',
-                    style: GoogleFonts.lato(
-                        fontSize: 18.0, fontWeight: FontWeight.bold),
-                  ),
-                ],
+                    AspectRatio(aspectRatio: 0.5),
+                    Text(
+                      'Continue with google',
+                      style: GoogleFonts.lato(
+                          fontSize: 18.0, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

@@ -25,6 +25,50 @@ class _CartState extends State<Cart> {
       body: ListView(
         padding: EdgeInsets.all(10.0),
         children: [
+          Padding(
+            padding:
+                EdgeInsets.only(top: 15.0, bottom: 5.0, left: 5.0, right: 5.0),
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 3.0,
+                      blurRadius: 5.0,
+                    ),
+                  ],
+                  color: Color(0xffFBFBFB)),
+              child: Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Text('Deliver to :',style: GoogleFonts.roboto(fontSize: 10.0,color: Color(0xff656565)),),
+                    Text('Zachariya Pothen',style: GoogleFonts.roboto(fontSize: 13.0,color: Color(0xff5D5D5D),fontWeight: FontWeight.bold),),
+                    Container(
+                      width: 65.0,
+                      height: 17.0,
+                      child: RaisedButton(
+
+                        child: Text(
+                          "Change",
+                          style: GoogleFonts.roboto(fontSize: 8.0,color: Color(0xffFFFFFF)),
+                        ),
+                        onPressed: () {
+
+                        },
+                        color: Color(0xff2BC48B),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(08.0),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
           _buildCard('MANGO', '₹ 40', 'images/kiwi.jpg', context),
           //_buildCard('MANGO', '₹ 40', 'images/kiwi.jpg', context),
           //_buildCard('MANGO', '₹ 40', 'images/kiwi.jpg', context),
@@ -164,7 +208,6 @@ Widget _buildCard(String name, String price, String imgPath, context) {
                 ],
               ),
             ),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
@@ -186,15 +229,19 @@ Widget _buildCard(String name, String price, String imgPath, context) {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left:8.0),
+                            padding: const EdgeInsets.only(left: 8.0),
                             child: DropdownButton<int>(
                               value: dropdownValue,
-                              icon: Icon(Icons.arrow_downward,size: 10.0,),
+                              icon: Icon(
+                                Icons.arrow_downward,
+                                size: 10.0,
+                              ),
                               iconSize: 24,
                               elevation: 16,
-                              style: GoogleFonts.openSans(color: Colors.black,fontSize: 10.0),
+                              style: GoogleFonts.openSans(
+                                  color: Colors.black, fontSize: 10.0),
 
-                              onChanged: (int ){},
+                              onChanged: (int) {},
                               //                      onChanged: (String newValue) {
                               ////                        setState(() {
                               ////                          dropdownValue = newValue;
@@ -222,7 +269,8 @@ Widget _buildCard(String name, String price, String imgPath, context) {
               width: double.infinity,
             ),
             Padding(
-              padding: EdgeInsets.only(top: 15.0,
+              padding: EdgeInsets.only(
+                top: 15.0,
                 left: 5.0,
                 right: 5.0,
                 bottom: 5.0,
@@ -259,7 +307,6 @@ Widget _buildCard(String name, String price, String imgPath, context) {
                 ],
               ),
             ),
-
           ],
         ),
       ),
