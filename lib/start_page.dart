@@ -81,7 +81,7 @@ class StartPage extends StatelessWidget {
           },
           child: Padding(
             padding:
-            const EdgeInsets.only(top: 25.0, right: 30.0, left: 30.0),
+            const EdgeInsets.only(top: 25.0, right: 18.0, left: 18.0),
             child: AspectRatio(
               aspectRatio: 6,
               child: Container(
